@@ -19,14 +19,17 @@ color:#8899e2;
   font-family: Nixie-One;
   src: url(Nixie_One/NixieOne-Regular.ttf);
 }
-
+.nixieglow{
+  font-family: Nixie-One;
+  color:orange;
+  text-shadow: 0px 0px 5px orangered, 0px 0px 15px orangered, 0px 0px 30px orangered ;}
 body
 {
-  /* you better change this stuff */
-  margin: 0px;
-  font-family: Nixie-One;
-  background-color: #e5e3e4;
+  margin: 5% 10%;
+  font-family: 'Times New Roman';
+  background-color: #111016;
   font-size: 100%;
+  
 }
 h1
 {
