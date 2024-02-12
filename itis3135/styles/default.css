@@ -1,13 +1,37 @@
+*{
+--woodsmoke: #111016;
+--french-gray: #bebdc3;
+--chetwode-blue: #8899e2;
+--cod-gray: #191514;
+--barley-corn: #a38561;
+--taupe: #3e352c;
+--nutmeg: #822d2f;
+--cocoa-bean: #541d1b;
+--beauty-bush: #f2cfc9;
+--black-bean: #431613;
+--wisteria: #a897d8;
+--platinum: #e5e3e4;
+--chamoisee: #86705e;
+--night: #111410;
+color:#8899e2;
+}
+@font-face {
+  font-family: Nixie-One;
+  src: url(Nixie_One/NixieOne-Regular.ttf);
+}
+
 body
 {
   /* you better change this stuff */
-  margin: 300px;
-  font-family: papyrus;
-  color: red;
-  background-color: green;
-  font-size: 300%;
+  margin: 0px;
+  font-family: Nixie-One;
+  background-color: #e5e3e4;
+  font-size: 100%;
 }
 h1
 {
   text-align: center;
+}
+a:visited{
+  color: none;
 }
