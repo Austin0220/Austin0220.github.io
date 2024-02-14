@@ -19,22 +19,55 @@ color:#8899e2;
   font-family: Nixie-One;
   src: url(Nixie_One/NixieOne-Regular.ttf);
 }
+@font-face {
+  font-family: Silk-Remington;
+  src: url(silk_remington/SilkRemington-SBold.ttf);
+}
 .nixieglow{
   font-family: Nixie-One;
   color:orange;
   text-shadow: 0px 0px 5px orangered, 0px 0px 15px orangered, 0px 0px 30px orangered ;}
+header{
+  margin:auto;
+  padding: 5px;
+  
+}
 body
 {
-  margin: 5% 10%;
-  font-family: 'Times New Roman';
+  margin: auto 5%;
+  font-family: 'Silk-Rremington';
   background-color: #111016;
   font-size: 100%;
   
 }
-h1
+
+h2, h3
 {
-  text-align: center;
+  font-family: 'Silk-Rremington';
 }
 a:visited{
   color: none;
+  text-decoration:none;
 }
+footer > a{
+  text-decoration: none;
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+
+ }
