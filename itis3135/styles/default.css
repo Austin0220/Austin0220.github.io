@@ -15,6 +15,7 @@
 --chamoisee: #86705e;
 --night: #111410;
 color:var(--chetwode-blue);
+
 }
 @font-face {
   font-family: Nixie-One;
@@ -32,18 +33,22 @@ color:var(--chetwode-blue);
   font-family: none;
   color:orange;
 }
+main{
+  margin: 0 auto;
+}
 nav{
   text-align:center;
 }
 header{
-  margin:auto;
+  margin: 0 auto;
 }
-body
+main, body
 {
-  margin: auto 5%, 15%;
+  margin: 0 auto;
   font-family: Silk-Remington;
   background-color: #111016;
-  font-size: 100%;
+  font-size: 110%;
+  justify-content: center;
 }
 h1{
   font-family:Nixie-One;
@@ -70,24 +75,49 @@ img{
 }
 footer{
   text-align: center;
-  margin:5% 15%;
+  margin:0 auto;
 }
-/*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) { 
-
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+main{
+  max-width:600px;
+  margin:0 auto;
+  width:90%;
 }
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) { 
-
- }
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) { 
-
 }
 
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) { 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (width< 600px) {
+main{
+  max-width:767px;
+  margin:0 auto;
+  width:90%;
+}
+}
 
- }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (width>= 768px) {
+main{
+  max-width:991px;
+  margin:0 auto;
+  width:90%;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (width>= 992px) {
+main{
+  max-width: 1199;
+  margin:0 auto;
+  width:90%;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (width>=1200px) {
+main{
+  max-width:2000px;
+  margin:0 auto;
+  width:90%;
+}
+}
