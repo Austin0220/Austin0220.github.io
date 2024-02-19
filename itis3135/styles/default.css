@@ -1,11 +1,12 @@
 *{
 --woodsmoke: #111016;
 --french-gray: #bebdc3;
---chetwode-blue: #8899e2;
+--chetwode-blue: #91a3f3;
 --cod-gray: #191514;
 --barley-corn: #a38561;
 --taupe: #3e352c;
 --nutmeg: #822d2f;
+--nutmeg2: #a03334;
 --cocoa-bean: #541d1b;
 --beauty-bush: #f2cfc9;
 --black-bean: #431613;
@@ -13,7 +14,7 @@
 --platinum: #e5e3e4;
 --chamoisee: #86705e;
 --night: #111410;
-color:#8899e2;
+color:var(--chetwode-blue);
 }
 @font-face {
   font-family: Nixie-One;
@@ -24,33 +25,52 @@ color:#8899e2;
   src: url(silk_remington/SilkRemington-SBold.ttf);
 }
 .nixieglow{
-  font-family: Nixie-One;
   color:orange;
-  text-shadow: 0px 0px 5px orangered, 0px 0px 15px orangered, 0px 0px 30px orangered ;}
+  text-shadow: 0px 0px 5px orange,0px 0px 10px orangered,  0px 0px 15px orangered, 0px 0px 30px orangered ;
+}
+.default{
+  font-family: none;
+  color:orange;
+}
+nav{
+  text-align:center;
+}
 header{
   margin:auto;
-  padding: 5px;
-  
 }
 body
 {
-  margin: auto 5%;
-  font-family: 'Silk-Rremington';
+  margin: auto 5%, 15%;
+  font-family: Silk-Remington;
   background-color: #111016;
   font-size: 100%;
-  
 }
-
+h1{
+  font-family:Nixie-One;
+  text-align:center;
+}
 h2, h3
 {
-  font-family: 'Silk-Rremington';
+  font-family: Silk-Remington;
+  
 }
 a:visited{
   color: none;
   text-decoration:none;
 }
-footer > a{
+a:hover{
+  color:#a897d8;
+}
+a{
   text-decoration: none;
+  color:var(--nutmeg2);
+}
+img{
+  margin:.5%;
+}
+footer{
+  text-align: center;
+  margin:5% 15%;
 }
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) { 
