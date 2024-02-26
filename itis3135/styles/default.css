@@ -83,41 +83,55 @@ main{
   max-width:600px;
   margin:0 auto;
   width:90%;
+  justify-content: center;
 }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (width< 600px) {
 main{
-  max-width:767px;
+  max-width:768px;
   margin:0 auto;
   width:90%;
+  padding: 10%;
+  justify-content: center;
 }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (width>= 768px) {
+@media only screen and (width<= 768px) {
 main{
-  max-width:991px;
+  max-width:992;
   margin:0 auto;
   width:90%;
+  justify-content: center;
 }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (width>= 992px) {
+@media only screen and (width<= 992px) {
 main{
-  max-width: 1199;
+  max-width: 1200;
   margin:0 auto;
   width:90%;
+  justify-content: center;
 }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (width>=1200px) {
+@media only screen and (width<=1200px) {
 main{
   max-width:2000px;
   margin:0 auto;
   width:90%;
+  padding-left: 15%;
 }
 }
+@media only screen and (width>1200px) {
+  main{
+    max-width:2000px;
+    margin:0 auto;
+    width:90%;
+    padding-left: 15%;
+  }
+  }
