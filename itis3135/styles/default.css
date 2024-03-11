@@ -54,10 +54,10 @@ h1{
   font-family:Nixie-One;
   text-align:center;
 }
-h2, h3
+h2
 {
   font-family: Silk-Remington;
-  
+  text-align: center;
 }
 a:visited{
   color: none;
@@ -70,9 +70,14 @@ a{
   text-decoration: none;
   color:var(--nutmeg2);
 }
+figure{
+  justify-content:center;
+  width:10%;
+}
 img{
   margin:.5%;
 }
+
 footer{
   text-align: center;
   margin:0 auto;
@@ -93,8 +98,6 @@ main{
   max-width:768px;
   margin:0 auto;
   width:90%;
-  padding: 10%;
-  justify-content: center;
 }
 }
 
@@ -103,8 +106,7 @@ main{
 main{
   max-width:992px;
   margin:0 auto;
-  width:90%;
-  justify-content: center;
+  width:90%; 
 }
 }
 
@@ -113,8 +115,7 @@ main{
 main{
   max-width: 1200px;
   margin:0 auto;
-  width:90%;
-  justify-content: center;
+  width:90%; 
 }
 }
 
@@ -123,8 +124,7 @@ main{
 main{
   max-width:2000px;
   margin:0 auto;
-  width:80%;
-  padding-left: 15%;
+  width:60%;
 }
 }
 @media only screen and (width>1200px) {
@@ -132,6 +132,5 @@ main{
     max-width:2000px;
     margin:0 auto;
     width:50%;
-    padding-left: 15%;
   }
   }
