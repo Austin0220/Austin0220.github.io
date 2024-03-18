@@ -60,7 +60,7 @@ h2
   text-align: center;
 }
 a:visited{
-  color: none;
+  color: var(--nutmeg2);
   text-decoration:none;
 }
 a:hover{
