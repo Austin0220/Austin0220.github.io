@@ -129,7 +129,7 @@ main{
 }
 @media only screen and (width>1200px) {
   main{
-    max-width:2000px;
+    max-width:1500px;
     margin:0 auto;
     width:50%;
   }
