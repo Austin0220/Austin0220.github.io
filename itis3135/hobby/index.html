@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Single Page Website with Integrated Stylesheet</title>
+<style>
+    /* Integrated stylesheet */
+    @font-face {
+        font-family: Nixie-One;
+        src: url(/itis3135/styles/Nixie_One/NixieOne-Regular.ttf);
+      }
+      @font-face {
+        font-family: Silk-Remington;
+        src: url(/itis3135/styles/silk_remington/SilkRemington-SBold.ttf);
+      }
+      *{
+        --woodsmoke: #111016;
+        --french-gray: #bebdc3;
+        --chetwode-blue: #91a3f3;
+        --cod-gray: #191514;
+        --barley-corn: #a38561;
+        --taupe: #3e352c;
+        --nutmeg: #822d2f;
+        --nutmeg2: #a03334;
+        --cocoa-bean: #541d1b;
+        --beauty-bush: #f2cfc9;
+        --black-bean: #431613;
+        --wisteria: #a897d8;
+        --platinum: #e5e3e4;
+        --chamoisee: #86705e;
+        --night: #111410;
+        color:var(--chetwode-blue);
+        
+        }
+    #navbar {
+        background-color: var(--wisteria);
+        padding: 10px 0;
+    }
+    #navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    #navbar ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    #navbar ul li a {
+        color: var(--night);
+        text-decoration: none;
+    }
+    .nixieglow{
+        color:orange;
+        text-shadow: 0px 0px 5px orange,0px 0px 10px orangered,  0px 0px 15px orangered, 0px 0px 30px orangered ;
+      }
+      .default{
+        font-family: none;
+        color:orange;
+      }
+      main{
+        margin: 0 auto;
+      }
+      nav{
+        text-align:center;
+      }
+      header{
+        margin: 0 auto;
+      }
+      main, body
+      {
+        margin: 0 auto;
+        font-family: Silk-Remington;
+        background-color: #111016;
+        font-size: 110%;
+        justify-content: center;
+      }
+      h1{
+        font-family:Nixie-One;
+        text-align:center;
+        font-size: 300%;
+      }
+      h2, h3
+      {
+        font-family: Silk-Remington;
+        color:var(--platinum);
+        text-align: center;
+      }
+      a:visited{
+        color: var(--nutmeg2);
+        text-decoration:none;
+      }
+      a:hover{
+        color:#a897d8;
+      }
+      a{
+        text-decoration: none;
+        color:var(--nutmeg2);
+      }
+      img{
+        margin:.5%;
+        width:100%;
+        height:70%;
+        object-fit:contain;
+        width: 100%;
+      }
+      
+      footer{
+        text-align: center;
+        margin:0 auto;
+      }
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    main{
+      max-width:600px;
+      margin:0 auto;
+      width:90%;
+      justify-content: center;
+    }
+    }
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (width< 600px) {
+    main{
+      max-width:768px;
+      margin:0 auto;
+      width:90%;
+    }
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (width<= 768px) {
+    main{
+      max-width:992px;
+      margin:0 auto;
+      width:90%; 
+    }
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (width<= 992px) {
+    main{
+      max-width: 1200px;
+      margin:0 auto;
+      width:90%; 
+    }
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (width<=1200px) {
+    main{
+      max-width:2000px;
+      margin:0 auto;
+      width:60%;
+    }
+    }
+    @media only screen and (width>1200px) {
+      main{
+        max-width:1500px;
+        margin:0 auto;
+        width:50%;
+      }
+      }
+</style>
+</head>
+<body>
+<header>
+    <h1><span class="nixieglow">Nixie Tube Clocks</span></h1>
+</header>
+<div id="navbar">
+    <ul>
+        <li><a href="#" onclick="showPage('What')">What</a></li>
+        <span class="nixieglow">;</span>
+        <li><a href="#" onclick="showPage('Why')">Why</a></li>
+        <span class="nixieglow">;</span>
+        <li><a href="#" onclick="showPage('services')">Services</a></li>
+        <span class="nixieglow">;</span>
+        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        <span class="nixieglow">;</span>
+        <li><a href="#" onclick="showPage('prompts')">AI Prompting</a></li>
+    </ul>
+</div>
+<main>
+    <div id="What" class="page">
+        <h2>What Are Nixie Tubes?</h2>
+        <figure>
+            <img src="Images/IN-18_Nixie-Tube.jpg">
+        </figure>
+        <p>
+            Nixie Tubes are glass tubes sealed with low pressure neon and argon gas that use high voltage electrical discharge, 
+            being the orange glow they are known for, to display information. Usually this information pertains to numbers, 
+            but depending on the tube, can display decimal points, mathematical symbols, or even letters.                
+        </p>
+    </div>
+
+    <div id="Why" class="page">
+        <h2>Why Clocks?</h2>
+        <figure>
+            <img src="Images/IN-18_Complete-Clock-Divergence.jpg">
+        </figure>
+        <p>
+            The reason people make clocks out of nixie tubes is mainly due to the visual asthetic
+            of a nixie tube relative to other types of display technology. Sometimes you just can't beat that analogue glow!
+        </p>
+    </div>
+
+    <div id="services" class="page">
+        <h2>Our Services</h2>
+        <p>Discover what we offer...</p>
+    </div>
+
+    <div id="contact" class="page">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us...</p>
+    </div>
+    <div id="prompts" class="page">
+        <h2>AI Prompts Used & Summarized Results</h2>
+        <h3>Prompt 1:</h3>
+        <p><em>"Design an html skeleton utilizing javascript to make a 5 page website in a single html file."</em></p>
+        <h3>Results:</h3>
+        <p>The results of the above content worked almost perfectly on the first try with chatGPT.
+            The website in terms of proof of concept was beyond expectation to the point that I ended
+            up implimenting the structure immediately.
+        </p>
+    </div>
+</main>
+<script>
+    // JavaScript to toggle between pages
+    function showPage(pageId) {
+        var pages = document.querySelectorAll('.page');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+        document.getElementById(pageId).style.display = 'block';
+    }
+
+    // Show home page by default
+    showPage('What');
+</script>
+
+</body>
+</html>
