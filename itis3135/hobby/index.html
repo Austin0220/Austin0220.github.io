@@ -22,7 +22,7 @@
         --barley-corn: #a38561;
         --taupe: #3e352c;
         --nutmeg: #822d2f;
-        --nutmeg2: #a03334;
+        --nutmeg2: #7b2122;
         --cocoa-bean: #541d1b;
         --beauty-bush: #f2cfc9;
         --black-bean: #431613;
@@ -67,12 +67,13 @@
       }
       header{
         margin: 0 auto;
+        background-color: var(--cod-gray);
       }
       main, body
       {
         margin: 0 auto;
         font-family: Silk-Remington;
-        background-color: #111016;
+        background-color: var(--nutmeg2);
         font-size: 110%;
         justify-content: center;
       }
@@ -98,14 +99,17 @@
         text-decoration: none;
         color:var(--nutmeg2);
       }
-      img{
+      /*img{
         margin:.5%;
         width:100%;
         height:70%;
         object-fit:contain;
         width: 100%;
+      }*/
+      a{
+        text-decoration: none;
+        color:var(--nutmeg2);
       }
-      
       footer{
         text-align: center;
         margin:0 auto;
@@ -185,7 +189,7 @@
     <div id="What" class="page">
         <h2>What Are Nixie Tubes?</h2>
         <figure>
-            <img src="Images/IN-18_Nixie-Tube.jpg">
+            <img src="Images/IN-18_Nixie-Tube_Cropped.jpg">
         </figure>
         <p>
             Nixie Tubes are glass tubes sealed with low pressure neon and argon gas that use high voltage electrical discharge, 
@@ -197,7 +201,7 @@
     <div id="Why" class="page">
         <h2>Why Clocks?</h2>
         <figure>
-            <img src="Images/IN-18_Complete-Clock-Divergence.jpg">
+            <img src="Images/IN-18_Complete-Clock-Divergence.jpg" width="30px">
         </figure>
         <p>
             The reason people make clocks out of nixie tubes is mainly due to the visual asthetic
@@ -224,6 +228,19 @@
             up implimenting the structure immediately.
         </p>
     </div>
+    <footer>
+      <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+        <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." >
+        <script>
+            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        </script>
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+        <script>
+            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+        </script>
+        <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." >
+    </footer>
 </main>
 <script>
     // JavaScript to toggle between pages
