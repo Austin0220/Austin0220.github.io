@@ -19,22 +19,22 @@
         --french-gray: #bebdc3;
         --chetwode-blue: #91a3f3;
         --cod-gray: #191514;
-        --barley-corn: #a38561;
+        --barley-corn: #d2a978;
         --taupe: #3e352c;
         --nutmeg: #822d2f;
-        --nutmeg2: #7b2122;
+        --nutmeg2: #621517;
         --cocoa-bean: #541d1b;
         --beauty-bush: #f2cfc9;
         --black-bean: #431613;
-        --wisteria: #a897d8;
+        --wisteria: #c3b2f1;
         --platinum: #e5e3e4;
         --chamoisee: #86705e;
         --night: #111410;
-        color:var(--chetwode-blue);
+        color:var(--wisteria);
         
         }
     #navbar {
-        background-color: var(--wisteria);
+        background-color: var(--platinum);
         padding: 10px 0;
     }
     #navbar ul {
@@ -48,72 +48,78 @@
         margin-right: 20px;
     }
     #navbar ul li a {
-        color: var(--night);
+        color: var(--nutmeg);
         text-decoration: none;
     }
     .nixieglow{
         color:orange;
         text-shadow: 0px 0px 5px orange,0px 0px 10px orangered,  0px 0px 15px orangered, 0px 0px 30px orangered ;
-      }
-      .default{
-        font-family: none;
-        color:orange;
-      }
-      main{
-        margin: 0 auto;
-      }
-      nav{
-        text-align:center;
-      }
-      header{
-        margin: 0 auto;
-        background-color: var(--cod-gray);
-      }
-      main, body
-      {
-        margin: 0 auto;
-        font-family: Silk-Remington;
-        background-color: var(--nutmeg2);
-        font-size: 110%;
-        justify-content: center;
-      }
-      h1{
-        font-family:Nixie-One;
-        text-align:center;
-        font-size: 300%;
-      }
-      h2, h3
-      {
-        font-family: Silk-Remington;
-        color:var(--platinum);
-        text-align: center;
-      }
-      a:visited{
-        color: var(--nutmeg2);
-        text-decoration:none;
-      }
-      a:hover{
-        color:#a897d8;
-      }
-      a{
-        text-decoration: none;
-        color:var(--nutmeg2);
-      }
-      /*img{
-        margin:.5%;
-        width:100%;
-        height:70%;
-        object-fit:contain;
-        width: 100%;
-      }*/
-      a{
-        text-decoration: none;
-        color:var(--nutmeg2);
-      }
-      footer{
-        text-align: center;
-        margin:0 auto;
-      }
+    }
+    .default{
+      font-family: none;
+      color:orange;
+    }
+    em{
+      color: var(--barley-corn);
+    }
+    mark{
+      background-color: var(--night);
+    }
+    main{
+      margin: 0 auto;
+    }
+    nav{
+      text-align:center;
+    }
+    header{
+      margin: 0 auto;
+      background-color: var(--cod-gray);
+    }
+    main, body
+    {
+      margin: 0 auto;
+      font-family: Silk-Remington;
+      background-color: var(--nutmeg2);
+      font-size: 110%;
+      justify-content: center;
+    }
+    h1{
+      font-family:Nixie-One;
+      text-align:center;
+      font-size: 300%;
+    }
+    h2, h3
+    {
+      font-family: Silk-Remington;
+      color:var(--platinum);
+      text-align: center;
+    }
+    a:visited{
+      color: var(--nutmeg2);
+      text-decoration:none;
+    }
+    a:hover{
+      color:#a897d8;
+    }
+    a{
+      text-decoration: none;
+      color:var(--nutmeg2);
+    }
+    figure{
+      margin-left: auto;
+      margin-bottom: auto;
+      text-align: center;
+    }
+    a{
+      text-decoration: none;
+      color:var(--nutmeg2);
+    }
+    footer{
+      
+      text-align: center;
+      margin:0 auto;
+      background-color: var(--cod-gray);
+    }
     /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     main{
@@ -147,7 +153,7 @@
     main{
       max-width: 1200px;
       margin:0 auto;
-      width:90%; 
+      width:80%; 
     }
     }
     
@@ -156,92 +162,216 @@
     main{
       max-width:2000px;
       margin:0 auto;
-      width:60%;
+      width:70%;
     }
     }
     @media only screen and (width>1200px) {
       main{
         max-width:1500px;
         margin:0 auto;
-        width:50%;
+        width:60%;
       }
       }
 </style>
 </head>
 <body>
 <header>
-    <h1><span class="nixieglow">Nixie Tube Clocks</span></h1>
+    <h1><mark><span class="nixieglow">Nixie Tube Clocks</span></mark></h1>
 </header>
 <div id="navbar">
     <ul>
-        <li><a href="#" onclick="showPage('What')">What</a></li>
-        <span class="nixieglow">;</span>
-        <li><a href="#" onclick="showPage('Why')">Why</a></li>
-        <span class="nixieglow">;</span>
-        <li><a href="#" onclick="showPage('services')">Services</a></li>
-        <span class="nixieglow">;</span>
-        <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-        <span class="nixieglow">;</span>
-        <li><a href="#" onclick="showPage('prompts')">AI Prompting</a></li>
+      <li><a href="#" onclick="showPage('About')">About</a></li>
+      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('What')">What</a></li>
+      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('Timeline')">Timeline</a></li>
+      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('Timeframe')">Timeframe</a></li>
+      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('Why')">Why</a></li>
+      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('Prompts')">AI Prompting</a></li>
     </ul>
 </div>
 <main>
     <div id="What" class="page">
-        <h2>What Are Nixie Tubes?</h2>
-        <figure>
-            <img src="Images/IN-18_Nixie-Tube_Cropped.jpg">
-        </figure>
-        <p>
-            Nixie Tubes are glass tubes sealed with low pressure neon and argon gas that use high voltage electrical discharge, 
-            being the orange glow they are known for, to display information. Usually this information pertains to numbers, 
-            but depending on the tube, can display decimal points, mathematical symbols, or even letters.                
-        </p>
+      <h2>What is the Purpose of this Site?</h2>
+      <p>
+        <em>This site is dedicated to building custom electronic clocks using Nixie Tubes.</em>
+      </p>
+      <h3>What Are Nixie Tubes?</h3>
+      <figure>
+          <img src="Images/IN-18_Nixie-Tube_Cropped.jpg"
+          width="153"
+          height="331"
+          alt="IN-18 Nixie Tube">
+          <figcaption><em>IN-18 Nixie Tube</em></figcaption>
+      </figure>
+      <p>
+          Nixie Tubes are glass tubes sealed with low pressure neon and argon gas that use high voltage electrical discharge, 
+          being the orange glow they are known for, to display information. Usually this information pertains to numbers, 
+          but depending on the tube, can display decimal points, mathematical symbols, or even letters.                
+      </p>
+      <h3>
+        What are Nixie Tube Clocks?
+      </h3>
+      <p>
+        Nixie tube clocks are, as the name would suggest, clocks made from nixie tubes.
+        They typically use hobby electronics and custom programs to function, and are typically very long lasting.
+      </p>
     </div>
 
     <div id="Why" class="page">
-        <h2>Why Clocks?</h2>
-        <figure>
-            <img src="Images/IN-18_Complete-Clock-Divergence.jpg" width="30px">
-        </figure>
-        <p>
-            The reason people make clocks out of nixie tubes is mainly due to the visual asthetic
-            of a nixie tube relative to other types of display technology. Sometimes you just can't beat that analogue glow!
-        </p>
+      <h2>Why Clocks?</h2>
+      <figure>
+          <img src="Images/IN-18_Complete-Clock-Divergence-Crop.jpg"
+          width="683"
+          height="300"
+          alt="IN-18 Nixie Tube Clock">
+          <figcaption><em>IN-18 Nixie Tube Clock</em></figcaption>
+      </figure>
+      <p>
+          The reason people make clocks out of nixie tubes is mainly due to the visual asthetic
+          of a nixie tube relative to other types of display technology. Sometimes you just can't beat that analogue glow!
+      </p>
+      <h3>Why more than one?</h3>
+      <figure>
+        <img src="Images/IN-14_Complete-Clock-Crop.jpg"
+        width="647"
+        height="363"
+        alt="IN-14 Nixie Tube Clock"
+        >
+        <figcaption><em>IN-14 Nixie Tube Clock</em></figcaption>
+      </figure>
+      <p>To be honest, the answer to this is the same as any other hobby, that being,"Why not, it's fun!"
+        What keeps it interesting is largely that these clocks always look different, much the same as art.
+        Compare these two clocks above for instance. They use the same components, Circuit board, metal, and angle iron stock.
+        the only difference is the size of the tubes, and as a result of this, the proportions of the case.
+      </p>
     </div>
 
-    <div id="services" class="page">
-        <h2>Our Services</h2>
-        <p>Discover what we offer...</p>
+    <div id="Timeframe" class="page">
+      <h2>How much time for each stage?</h2>
+      <p><em>Each of the steps established in the Timeline page will have their own timeframe, listed here.</em></p>
+      <h3>Planning</h3>
+      <p>
+        The shortest of the three steps, most of this will either be compiled for you if using a guide
+        or easy to compile based on specs and design. What can take a while is if you need to do custom design worka
+        as this requires some level of expertise and professional grade software. Overall if following a guide this 
+        should take a little under a month if not a week or two on and off.
+      </p>
+      <h3>Consolidation and Stepping</h3>
+      <figure>
+        <img src="Images/IN-18-Nixie-Tubes-Styrofoam.jpg"
+        width="533"
+        height="483"
+        alt="IN-18 Nixie Tubes Wrapped in Styrofoam">
+        <figcaption><em>IN-18 Nixie Tubes Wrapped in Styrofoam</em></figcaption>
+      </figure>
+      <p>
+        Gathering parts and waiting for shipping transit and supply chain availability will be the longest aspect of this step.
+        In addition, the organization of parts will be something to consider, but shouldn't take more than a day
+        overall accounting for shipping and out of stock parts, this should take around 3 months on average for most people.
+        The hardest part to get is usually the nixie tubes, being no longer produced in many cases, they are only available
+        on Ebay, and usually ship from eastern europe as most are of old Soveit make.
+      </p>
+      <h3>Assembly</h3>
+      <figure>
+        <img src="Images/IN-14-Dissasembled-Clock.jpg"
+        width="685"
+        height="316"
+        alt="IN-14 Clock No Case">
+        <figcaption><em>IN-14 Clock No Case</em></figcaption>
+      </figure>
+      <p>
+        Assemblly with be the longest part of the project unless you have the exact tools you need. Soldering, assembling,
+        and testing the electronics will take up most of the assembly time, the rest will be prepping, building, and finalizing 
+        external components like the tube sockets, chassis, and mounting hardware to be able to take it apart and
+        troubleshoot later down the road.
+      </p>      
     </div>
 
-    <div id="contact" class="page">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us...</p>
+
+    <div id="About" class="page">
+      <h2>About the Author</h2>
+      <figure>
+        <img src="Images/Austin-Bass.jpg"
+        height="500"
+        alt="Author's Favorite Bass Guitar">
+        <figcaption><em>Sterling Bass Guitar</em></figcaption>
+      </figure>
+       <p>Austin Sasso is a Junior in College who loves guitars, electronics, and pretty much any technical problem you can throw at him.
+
+       </p>
     </div>
-    <div id="prompts" class="page">
-        <h2>AI Prompts Used & Summarized Results</h2>
-        <h3>Prompt 1:</h3>
-        <p><em>"Design an html skeleton utilizing javascript to make a 5 page website in a single html file."</em></p>
-        <h3>Results:</h3>
-        <p>The results of the above content worked almost perfectly on the first try with chatGPT.
-            The website in terms of proof of concept was beyond expectation to the point that I ended
-            up implimenting the structure immediately.
-        </p>
+
+    <div id="Prompts" class="page">
+      <h2>AI Prompts Used & Summarized Results</h2>
+      <h3>Prompt 1:</h3>
+      <p><em>"Design an html skeleton utilizing javascript to make a 5 page website in a single html file."</em></p>
+      <h3>Results:</h3>
+      <p>The results of the above content worked almost perfectly on the first try with chatGPT.
+        The website in terms of proof of concept was beyond expectation to the point that I ended
+        up implimenting the structure immediately.
+      </p>
     </div>
-    <footer>
-      <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-        <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." >
-        <script>
-            document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
-        </script>
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-        <script>
-            document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-        </script>
-        <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." >
-    </footer>
+
+    <div id="Timeline" class="page">
+      <h2>Order of events</h2>
+      <p><em>This page will outline the basic requirements for building a nixie clock.</em></p>
+      <h3>Planning</h3>
+      <figure>
+        <img src="Images/PCB-Populated-Crop.jpg"
+        width="590"
+        height="257"
+        alt="Power Supply and Microcontroller for Nixie Clock (Partial Construction)">
+        <figcaption><em>Power Supply and Microcontroller for Nixie Clock (Partial Construction)</em></figcaption>
+      </figure>
+      <p> The planning phase consists of selecting your nixie tube type, either based on looks or cost. 
+        The two examples seen on this site are the IN-14 (the smaller one with a point on the top of the tube) 
+        or the IN-18 (the larger, smooth top tube) This will go on to determine the rest of your build, from there
+        find or design a circuit board and determine the type of case you will want to build.
+      </p>
+      <h3>Consolidation and Stepping</h3>
+      <p>
+        Next is to order and consolidate your parts, in order of assembly. Traditionally you want to start with the electronics,
+        get a working clock, then build the case around that. Divide each of these assembly steps accordingly so as to avoid damaging equipment
+        or the clock.
+      </p>
+      <h3>Assembly</h3>
+      <figure>
+        <img src="Images/Case-Construction-Crop.jpg"
+        width="733"
+        height="294"
+        alt="Partial Case Construction With Nixie Tube Sockets (Unpainted)">
+        <figcaption><em>Partial Case Construction With Nixie Tube Sockets (Unpainted)</em></figcaption>
+      </figure>
+      <p>
+        Requires Electronic Assembly and testing to ensure funcitonality, and then once everything is confirmed working,
+        housing and other asthetic features, and ensuring solid and stable construction.
+      </p>
+    </div>
 </main>
+<footer>
+  <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." >
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    </script>
+</a>
+<a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+    <script>
+        document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." >
+<a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_wcag">
+  <script>
+      document.getElementById("validation_link_css").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/asasso1/itis3135/hobby/index.html" + location.href);
+  </script>
+  <img src="images/button_validation_wcag-1.png" width="88" height="31" alt="Validate webpage CSS." >
+  <br>
+  <span class="nixieglow"> Designed By: Sasso Designs <span class="default">©</span>2024</span>
+</footer>
 <script>
     // JavaScript to toggle between pages
     function showPage(pageId) {
@@ -251,10 +381,8 @@
         }
         document.getElementById(pageId).style.display = 'block';
     }
-
     // Show home page by default
     showPage('What');
 </script>
-
 </body>
 </html>
