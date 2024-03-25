@@ -8,11 +8,11 @@
     /* Integrated stylesheet */
     @font-face {
         font-family: Nixie-One;
-        src: url(/itis3135/styles/Nixie_One/NixieOne-Regular.ttf);
+        src: url(Fonts/Nixie_One/NixieOne-Regular.ttf);
       }
       @font-face {
         font-family: Silk-Remington;
-        src: url(/itis3135/styles/silk_remington/SilkRemington-SBold.ttf);
+        src: url(Fonts/silk_remington/SilkRemington-SBold.ttf);
       }
       *{
         --woodsmoke: #111016;
@@ -22,7 +22,7 @@
         --barley-corn: #d2a978;
         --taupe: #3e352c;
         --nutmeg: #822d2f;
-        --nutmeg2: #621517;
+        --nutmeg2: #7b2122;
         --cocoa-bean: #541d1b;
         --beauty-bush: #f2cfc9;
         --black-bean: #431613;
@@ -34,10 +34,12 @@
         
         }
     #navbar {
-        background-color: var(--platinum);
+        background-color: var(--cod-gray);
         padding: 10px 0;
     }
     #navbar ul {
+      color:orange;
+        text-shadow: 0px 0px 5px orange,0px 0px 10px orangered,  0px 0px 15px orangered, 0px 0px 30px orangered ;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -48,7 +50,7 @@
         margin-right: 20px;
     }
     #navbar ul li a {
-        color: var(--nutmeg);
+        color: orange;
         text-decoration: none;
     }
     .nixieglow{
@@ -61,9 +63,6 @@
     }
     em{
       color: var(--barley-corn);
-    }
-    mark{
-      background-color: var(--night);
     }
     main{
       margin: 0 auto;
@@ -95,11 +94,10 @@
       text-align: center;
     }
     a:visited{
-      color: var(--nutmeg2);
       text-decoration:none;
     }
     a:hover{
-      color:#a897d8;
+      color:orangered;
     }
     a{
       text-decoration: none;
@@ -109,10 +107,6 @@
       margin-left: auto;
       margin-bottom: auto;
       text-align: center;
-    }
-    a{
-      text-decoration: none;
-      color:var(--nutmeg2);
     }
     footer{
       
@@ -176,20 +170,15 @@
 </head>
 <body>
 <header>
-    <h1><mark><span class="nixieglow">Nixie Tube Clocks</span></mark></h1>
+    <h1><span class="nixieglow">Nixie Tube Clocks</span></h1>
 </header>
 <div id="navbar">
     <ul>
-      <li><a href="#" onclick="showPage('About')">About</a></li>
-      <span class="nixieglow">;</span>
-      <li><a href="#" onclick="showPage('What')">What</a></li>
-      <span class="nixieglow">;</span>
-      <li><a href="#" onclick="showPage('Timeline')">Timeline</a></li>
-      <span class="nixieglow">;</span>
-      <li><a href="#" onclick="showPage('Timeframe')">Timeframe</a></li>
-      <span class="nixieglow">;</span>
-      <li><a href="#" onclick="showPage('Why')">Why</a></li>
-      <span class="nixieglow">;</span>
+      <li><a href="#" onclick="showPage('About')">About ;</a></li>
+      <li><a href="#" onclick="showPage('What')">What ;</a></li>
+      <li><a href="#" onclick="showPage('Timeline')">Timeline ;</a></li>
+      <li><a href="#" onclick="showPage('Timeframe')">Timeframe ;</a></li>
+      <li><a href="#" onclick="showPage('Why')">Why ;</a></li>
       <li><a href="#" onclick="showPage('Prompts')">AI Prompting</a></li>
     </ul>
 </div>
@@ -291,7 +280,6 @@
       </p>      
     </div>
 
-
     <div id="About" class="page">
       <h2>About the Author</h2>
       <figure>
@@ -300,8 +288,15 @@
         alt="Author's Favorite Bass Guitar">
         <figcaption><em>Sterling Bass Guitar</em></figcaption>
       </figure>
-       <p>Austin Sasso is a Junior in College who loves guitars, electronics, and pretty much any technical problem you can throw at him.
-
+       <p>
+        Austin Sasso is a Junior in College who loves guitars, electronics, and pretty much any technical problem you can throw at him.
+        He is currently studying for his computer science degree.
+       </p>
+       <h3>Interest in Nixie Clocks</h3>
+       <p>
+        The interest in his first nixie clock came from a tv show called Steins;Gate. In the show a device made with nixie tubes is 
+        used as a plot devicefor crucial information. The clocks shown here model the device almost to a T, and have a dedicated mode 
+        for replicating the show's purpose for the device.
        </p>
     </div>
 
@@ -354,21 +349,23 @@
 </main>
 <footer>
   <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." >
+    <img src="Images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." >
     <script>
         document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
     </script>
 </a>
 <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+    <img src="Images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." >
     <script>
         document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
-    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." >
-<a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_wcag">
+</a>
+<a href="https://wave.webaim.org/report#/" id="validation_link_wcag">
+  <img src="Images/button_validation_wcag-1.png" width="88" height="31" alt="Validate webpage Accessibility." >
   <script>
-      document.getElementById("validation_link_css").setAttribute("href", "https://wave.webaim.org/report#/https://webpages.charlotte.edu/asasso1/itis3135/hobby/index.html" + location.href);
+      document.getElementById("validation_link_wcag").setAttribute("href", "https://wave.webaim.org/report#/" + location.href);
   </script>
-  <img src="images/button_validation_wcag-1.png" width="88" height="31" alt="Validate webpage CSS." >
+</a>
   <br>
   <span class="nixieglow"> Designed By: Sasso Designs <span class="default">©</span>2024</span>
 </footer>
