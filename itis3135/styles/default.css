@@ -102,7 +102,7 @@ th{
   color: #a897d8;
   
 }
-ul li:nth-child(odd), table tr:nth-child(even) {
+table tr:nth-child(even) {
   background-color:#191514;
   color:var(--platinum); }
 /* Extra small devices (phones, 600px and down) */
