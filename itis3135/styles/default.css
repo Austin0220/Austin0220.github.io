@@ -7,7 +7,7 @@
 --taupe: #3e352c;
 --nutmeg: #822d2f;
 --nutmeg2: #a03334;
---cocoa-bean: #541d1b;
+--cocoa-bean: #884543;
 --beauty-bush: #f2cfc9;
 --black-bean: #431613;
 --wisteria: #a897d8;
@@ -58,13 +58,28 @@ h2
 {
   font-family: Silk-Remington;
   text-align: center;
+  color:#e5e3e4;
+}
+h3
+{
+  font-family: Silk-Remington;
+  text-align: center;
+  color:var(--platinum);
+}
+figcaption
+{
+  padding:10px;
+  padding-top:0;
+  font-family: Silk-Remington;
+  text-align: center;
+  color:var(--cocoa-bean);
 }
 a:visited{
   color: var(--nutmeg2);
   text-decoration:none;
 }
 a:hover{
-  color:#a897d8;
+  color:var(--wisteria);
 }
 a{
   text-decoration: none;
@@ -82,6 +97,14 @@ footer{
   text-align: center;
   margin:0 auto;
 }
+th{
+  text-align: center;
+  color: #a897d8;
+  
+}
+ul li:nth-child(odd), table tr:nth-child(even) {
+  background-color:#191514;
+  color:var(--platinum); }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 main{
@@ -124,7 +147,7 @@ main{
 main{
   max-width:2000px;
   margin:0 auto;
-  width:60%;
+  width:80%;
 }
 }
 @media only screen and (width>1200px) {
