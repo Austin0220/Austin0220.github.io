@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Austin Sasso's Astute Sugar Glider ; Forms</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/default.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+        
+    </head>
+    <header data-include="components/header.html"></header>
+        <main>
+            <h2>Nixie Clock Preference Form</h2>
+            <form action="#">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+        
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required><br><br>
+        
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+        
+                <label>Checkboxes:</label><br>
+                <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+                <label for="checkbox1">Sockets?</label><br>
+                <input type="checkbox" id="checkbox2" name="checkbox2" value="option2">
+                <label for="checkbox2">Paint?</label><br><br>
+        
+                <label>Radio Buttons:</label><br>
+                <input type="radio" id="radio1" name="radio" value="option1">
+                <label for="radio1">IN-14</label><br>
+                <input type="radio" id="radio2" name="radio" value="option2">
+                <label for="radio2">IN-18</label><br><br>
+        
+                <label for="select">Select:</label><br>
+                <select id="select" name="select">
+                    <option value="option1">Base</option>
+                    <option value="option2">Rechargeable</option>
+                    <option value="option3">Additional Button</option>
+                </select><br><br>
+        
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+    <footer data-include="components/footer.html"></footer>
+    <script src="scripts/headers-footers.js"></script>
+</html>

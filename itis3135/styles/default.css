@@ -100,7 +100,19 @@ footer{
 th{
   text-align: center;
   color: #a897d8;
-  
+}
+form{
+  text-align: center;
+}
+label{
+  text-align: center;
+  color:#91a3f3;
+  font-style: italic;
+}
+input, select{
+  background-color: var(--black-bean);
+  color: var(--chetwode-blue);
+  border:2px solid #91a3f3;
 }
 table tr:nth-child(even) {
   background-color:#191514;
