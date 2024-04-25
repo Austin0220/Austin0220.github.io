@@ -1,0 +1,31 @@
+@font-face {
+    font-family: comic-sans;
+    src: url(COMICSANS.TTF);
+}
+@font-face {
+    font-family: papyrus;
+    src: url(papyrus.ttf);
+}
+@font-face {
+    font-family: dread;
+    src: url(Comic\ Papyrus.ttf);
+}
+*{
+    
+    font-family: comic-sans;
+    text-align: center;
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+h2, h3{
+    font-family: papyrus;
+}
+p{
+    font-size: 400px;
+    border-top: 50px solid black;
+    border-left: 50px dotted black;
+    border-right: 50px dashed black;
+    border-bottom: 50px groove black;
+}
