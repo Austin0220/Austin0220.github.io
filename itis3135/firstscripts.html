@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Austin Sasso's Astute Sugar Glider ; Scripts</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/default.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+        <script  src="scripts/defaultscripts.js" type="text/javascript"></script>
+    </head>
+    <header data-include="components/header.html"></header>
+        <main>
+            <h2>First Scripts</h2>
+            <h3>Todays date and time: <span id="mydate">?</span></h3>
+            <script>
+               dateTime();
+            </script>
+            <input id="name" placeholder="Name">
+            <input id="mood" placeholder="Mood">
+            <button type="button" onclick="userGreeting()">Submit</button>
+            <p id="response"></p>
+            <input id="favoritenumber" placeholder="Favorite Number">
+            <button type="button" onclick="favoriteNumber()">Submit</button>
+            <p id="favresult"></p>
+            <button id="tracker" onclick="clickTracker()">Pet the Sugar Glider!</button>
+            <p id="trackerresult"></p>
+            <button id="goldietracker" onclick="goldielocksClicks()">Feed the Sugarglider</button>
+            <p id="goldieresult"></p>
+            <button id="eggcheck" onclick="easterEgg()">Did you find the easter egg?</button>
+            <p id="eggresult"></p>
+            <button id="reset" onclick="reset()">Reset</button>
+        </main>
+        <footer data-include="components/footer.html"></footer>
+        <script src="scripts/headers-footers.js"></script>
+        
+</html>
