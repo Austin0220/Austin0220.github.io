@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RetroActive Designs: Contact Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/default.css">
+        
+    </head>
+    <main>
+        <header data-include="components/header.html"></header>
+        <h2>Contact Us</h2>
+        <p>If you wish to get in contact with us about a particular project, fill out the form below:</p>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="title">Title:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="company">Company Name:</label><br>
+            <input type="text" id="company" name="company" required><br><br>
+          
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+          
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
+          
+            <label for="message">Additional Information:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+          
+            <input type="submit" value="Submit">
+          </form>
+          <footer data-include="components/footer.html"></footer>
+        <script src="scripts/headers-footers.js"></script>
+    </main>
+</html>

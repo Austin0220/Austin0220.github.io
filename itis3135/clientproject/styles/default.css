@@ -1,0 +1,104 @@
+*{
+--lapis-lazuli: #006494ff;
+--prussian-blue: #003554ff;
+--prussian-lite: #275a79;
+--rich-black: #03131b;
+--light-blue: #9ac6c5ff;
+--vivid-sky-blue: #4cc9f0ff;
+font-family: lexend;
+color:var(--prussian-lite);
+background-color: lightblue;
+}
+@font-face {
+    font-family: lexend;
+    src: url(Lexend-VariableFont_wght.ttf);
+}
+h1{
+    font-size: 300%;
+    color:var(--prussian-blue);
+    margin-bottom:0%;
+}
+h2, h3, figcaption{
+    text-align: center;
+}
+.personel>li{
+    list-style-type: none;
+}
+header{
+    color:var(--prussian-blue)
+}
+header>p{
+    text-align: center;
+    font-style: italic;
+    color:var(--prussian-lite);
+    margin-top:1.5%;
+}
+nav{
+    text-align: center;
+    background-color: var(--prussian-blue);
+}
+nav>a{
+    background-color: var(--prussian-blue);
+    color: var(--light-blue)
+
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:var(--vivid-sky-blue)
+}
+footer{
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    main{
+      max-width:600px;
+      margin:0 auto;
+      width:90%;
+      justify-content: center;
+    }
+    }
+    
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (width< 600px) {
+    main{
+      max-width:768px;
+      margin:0 auto;
+      width:90%;
+    }
+    }
+    
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (width<= 768px) {
+    main{
+      max-width:992px;
+      margin:0 auto;
+      width:90%; 
+    }
+    }
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (width<= 992px) {
+    main{
+      max-width: 1200px;
+      margin:0 auto;
+      width:90%; 
+    }
+    }
+    
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (width<=1200px) {
+    main{
+      max-width:2000px;
+      margin:0 auto;
+      width:80%;
+    }
+    }
+    @media only screen and (width>1200px) {
+      main{
+        max-width:1500px;
+        margin:0 auto;
+        width:50%;
+      }
+      }
