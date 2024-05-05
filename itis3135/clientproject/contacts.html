@@ -28,7 +28,72 @@
           
             <label for="phone">Phone:</label><br>
             <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}"><br><br>
-          
+            <h3>Please Select the Services of Interest:</h3>
+            <h4>Obselesence Review</h4>
+            <div id="obselesenceInfo" style="display:none">
+                <ul class="checkbox-list">
+                    <li><input type="checkbox" id="obselesenceCheckbox1">
+                    <label for="obeslesenceCheckbox1">Parts Substitution - release packages</label></li>
+                    <li><input type="checkbox" id="obselesenceCheckbox2">
+                    <label for="obeslesenceCheckbox2">Re-spin</label></li>
+                </ul>
+            </div>
+                <button id="obselesenceButton" title="Click to show/hide content" type="button" onclick="if(document.getElementById('obselesenceInfo') .style.display=='none') 
+                {document.getElementById('obselesenceInfo') .style.display=''}else{document.getElementById('obselesenceInfo') .style.display='none'}">Show/Hide</button>
+                <h4>Prototyping</h4>
+                <div id="prototypeInfo" style="display:none">
+                <ul class="checkbox-list">
+                    <li><input type="checkbox" id="prototypeCheckbox1">
+                    <label for="prototypeCheckbox1">Schematic capture</label></li>
+                    <li><input type="checkbox" id="prototypeCheckbox2">
+                    <label for="prototypeCheckbox2">PWB Layout</label></li>
+                    <li><input type="checkbox" id="prototypeCheckbox3">
+                    <label for="prototypeCheckbox3">Certification Testing</label></li>
+                    <li><input type="checkbox" id="prototypeCheckbox4">
+                    <label for="prototypeCheckbox4">Component Sourcing</label></li>
+                    <li> <input type="checkbox" id="prototypeCheckbox5">
+                    <label for="prototypeCheckbox5">Initial Build</label></li>
+                    <li><input type="checkbox" id="prototypeCheckbox6">
+                    <label for="prototypeCheckbox6">Proof of Concept</label></li>
+                </ul>                
+                </div>
+                <button id="prototypingButton" title="Click to show/hide content" type="button" onclick="if(document.getElementById('prototypeInfo') .style.display=='none') 
+                {document.getElementById('prototypeInfo') .style.display=''}else{document.getElementById('prototypeInfo') .style.display='none'}">Show/Hide</button>
+                <h4>Troubleshooting</h4>
+                <div id="troubleshootingInfo" style="display:none">
+                    <ul class="checkbox-list">
+                        <li><input type="checkbox" id="troubleshootingCheckbox1">
+                        <label for="troubleshootingCheckbox1">Repair</label></li>
+                        <li><input type="checkbox" id="troubleshootingCheckbox2">
+                        <label for="troubleshootingCheckbox2">Redesign</label></li>
+                    </ul>
+                </div>
+                <button id="troubleshootingButton" title="Click to show/hide content" type="button" onclick="if(document.getElementById('troubleshootingInfo') .style.display=='none') 
+                {document.getElementById('troubleshootingInfo') .style.display=''}else{document.getElementById('troubleshootingInfo') .style.display='none'}">Show/Hide</button>
+                <h4>Training</h4>
+                <div id="trainingInfo" style="display:none">
+                    <ul class="checkbox-list">
+                        <li><input type="checkbox" id="trainingCheckbox1">
+                        <label fo="trainingCheckbox1">JSTD-001 Certified IPC Trainer</label></li>
+                        <li><input type="checkbox" id="trainingCheckbox2">
+                        <label for="trainingCheckbox2">Can train and certify your staff to JSTD-001 requirements</label></li>
+                    </ul>
+                </div>
+                <button id="trainingButton" title="Click to show/hide content" type="button" onclick="if(document.getElementById('trainingInfo') .style.display=='none')
+                 {document.getElementById('trainingInfo') .style.display=''}else{document.getElementById('trainingInfo') .style.display='none'}">Show/Hide</button>
+                <h4>Technical Support</h4>
+                <div id="techSupport" style="display:none">
+                    <ul class="checkbox-list">
+                        <li><input type="checkbox" id="techSupportCheckbox1">
+                        <label for="techSupportCheckbox1">PC Support</label></li>
+                        <li><input type="checkbox" id="techSupportCheckbox2">
+                        <label for="techSupportCheckbox2">PC Repair</label></li>
+                        <li><input type="checkbox" id="techSupportCheckbox3">
+                        <label fpr="techSupportCheckbox3">Redhat/Windows</label></li>
+                    </ul>
+                </div>
+                <button id="techSupportButton" title="Click to show/hide content" type="button" onclick="if(document.getElementById('techSupport') .style.display=='none')
+                 {document.getElementById('techSupport') .style.display=''}else{document.getElementById('techSupport') .style.display='none'}">Show/Hide</button><br><br>
             <label for="message">Additional Information:</label><br>
             <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
           

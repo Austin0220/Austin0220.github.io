@@ -13,6 +13,10 @@ background-color: lightblue;
     font-family: lexend;
     src: url(Lexend-VariableFont_wght.ttf);
 }
+.checkbox-list
+{
+  list-style-type: none;
+}
 h1{
     font-size: 300%;
     color:var(--prussian-blue);
