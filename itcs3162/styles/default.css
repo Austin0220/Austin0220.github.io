@@ -66,6 +66,11 @@ h3
   text-align: center;
   color:var(--platinum);
 }
+h4{
+  font-family: Silk-Remington;
+  text-align: center;
+  color:var(--platinum);
+}
 figcaption
 {
   padding:10px;
@@ -92,7 +97,9 @@ figure{
 img{
   margin:.5%;
 }
-
+li{
+  margin-bottom: 15px;
+}
 footer{
   text-align: center;
   margin:0 auto;

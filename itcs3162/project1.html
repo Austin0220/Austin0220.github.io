@@ -12,7 +12,168 @@
     <header data-include="components/header.html"></header>
         <main>
         <h2>Project 1</h2>
-            <p></p>
+        <h3>Questions/Introduction</h3>
+            <p>
+                Physical fitness is something that the general public seems misinformed on.
+                This opinion I hold led to a desire for understanding of what defines physical fitness 
+                and what factors there are to consider when defining weather someone is "fit" or not. 
+                This premise led to a few questions, which are as follows.
+            </p>
+            <ul>
+                <li>
+                    What correlation if any is there between body fat and strength?
+                </li>
+                <li>
+                    How does body fat affect physical fitness?
+                </li>
+                <li>
+                    What correlation if any is there between age and fitness?
+                </li>
+            </ul>
+            <p>
+                The data itself is a study on bodily performance while keeping track of various
+                physical traits such as sex, height, weight, and body fat percentage, while also
+                keeping track of physical performance metrics, such as grip strength, flexibility,
+                jump height, and other factors. 
+            </p>
+            <h3>
+                Pre-Processing
+            </h3>
+            <p>
+                The dataset used was remarkably clean, and as such only required ordering by category
+                for certain figures such as class.
+            </p>
+            <h3>
+                Visualizations and Understanding
+            </h3>
+            <h4>
+                Possible Correlations Between Fat and Strength.
+            </h4>
+            <p>
+                One of the first things examined was a scatterplot seen below.
+            </p>
+            <h4>
+                Figure 1
+            </h4>
+            <figure>
+                <img src="projectfiles\Project 1\figure2.2.png">
+            </figure>
+            <figcaption>
+                A scatterplot graph representing the relationship between weight and percentage body fat.
+            </figcaption>
+            <p>
+                While not meaning much on its own, figure 1 establishes a baseline of data for comparison.
+                Examining another comparison within the data against the same metric of weight we get another
+                scatterplot that looks related.
+            </p>
+            <h4>
+                Figure 2
+            </h4>
+            <figure>
+                <img src="projectfiles\Project 1\figure2.1.png">
+            </figure>
+            <figcaption>
+                A scatterplot graph representing the relationship between weight and grip Strength.
+            </figcaption>
+            <p>
+                Any correlation is hard to see separated like this, so another graph was made to overlap the two plots.
+            </p>
+            <h4>
+                Figure 3
+            </h4>
+            <figure>
+                <img src="projectfiles\Project 1\figure2.png">
+            </figure>
+            <figcaption>
+                A scatterplot graph combining the two above figures.
+            </figcaption>
+            <p>
+                Here we can finally see that, while there is a major overlap, there is no correlation, meaning
+                weight and body fat percentage are very important metrics that mean very different things when
+                talking about strength. 
+            </p>
+            <p>
+                To answer the primary question of this section, there seems
+                to be little correlation with strength and body fat percentage. We can also derrive from this plot
+                that the higher grip strength forces correlate to a lower body fat percentage relative to weight.
+                This would suggest that there might be a correlation between lower percentages and higher strength,
+                but more data is needed to determine this, which is not found in the dataset.
+            </p>
+            <h4>
+                Fat and Age Relative to Fitness
+            </h4>
+            <p>
+                Physical fitness is hard to determine without concrete guidelines. Luckily, this dataset
+                categorized the participants into tiered classes based on performance. These "classes" 
+                are A, B, C, and D respectively. The breakdown of each of these groups' body fat percentages
+                is represented below
+            </p>
+            <h4>
+                Figure 4
+            </h4>
+            <figure>
+                <img src="projectfiles\Project 1\figure3.png">
+            </figure>
+            <figcaption>
+                A boxplot representing general group body fat percentags.
+            </figcaption>
+            <p>
+                Here we see that there is a general trend of the better performers having less body fat percentages,
+                which suggests that, at the very least, the more fit you are, the less body fat you will have. This
+                point may seem obvious, but the fact that the data shows this commonly held belief is reassuring. It
+                shows that, in this case, the layman's perception is based in fact, and no correction should be made.
+            </p>
+            <p>
+                Next is a breakdown by age, using grip strength as a metric for muscle health, and extrapolating
+                that to physical fitness as a whole. While not a perfect metric, generally speaking grip strength
+                is harder to develop, so those with stronger grips will generally be more fit by nature and by daily
+                routine.
+            </p>
+            <h4>
+                Figure 5
+            </h4>
+            <figure>
+                <img src="projectfiles\Project 1\figure5.png"
+                width="100%">
+            </figure>
+            <figcaption>
+                A boxplot capturing the general trend of grip strength as related to age from the dataset
+            </figcaption>
+            <p>
+                Here there is a slight, but very much distinguishible decline the further up you go in age. 
+                This shows that not only is age related to physical strength, it is one of if not the primary
+                factor to consider when discussing fitness aside from diet and excersize. While there are outliers,
+                generally a 50 year old is not powerlifting, and a 23 year old is not going to generally be as worried
+                about bodily decline.
+            </p>
+            <p>
+                In both cases, we see that general perception holds true to generally accepted premises, which
+                is very encouraging.
+            </p>
+            <h2>
+                Impact and Considerations
+            </h2>
+            <p>
+                Many of the visualizations only suggest patterns and general trends. None of them are absolutely
+                concrete, primarily because the dataset is catered more toward general health and basic factors
+                rather than fitness focused. I could've delved more into blood pressure and how it relates
+                to body fat percentage, how it can be a more important outcome of physical fitness than body fat 
+                percentage, etc. I do believe, however, that I've  done at least a satisfactory exploration into 
+                data that correlates to publicly held beliefs and generally accepted truths, which is always reassuring.
+            </p>
+            <h3>
+                References & Resources Used
+            </h3>
+            <ul>
+                <li>Stack Overflow</li>
+                <li>Pandas Tutorial Assignment</li>
+                <li>Kaggle</li>
+                <li>Sns Documentation Page</li>
+                <li>Numpy documentation page</li>
+                <li>W3 Schools Tutorials</li>
+                <li>Github</li>
+            </ul>
+            <p>Code will be sent though a github link or a .zip file.</p>
         </main>
         <footer data-include="components/footer.html"></footer>
         <script src="scripts/headers-footers.js"></script>
