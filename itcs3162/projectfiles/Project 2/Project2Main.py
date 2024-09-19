@@ -1,8 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-Raw= pd.read_csv('bodyPerformance.csv')
+# NEEDS ABSOLUTE FILE PATH!!! #
+Raw= pd.read_csv("C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 2\\bodyPerformance.csv")
 print(Raw.head())
 print(Raw.columns)
 print(Raw.dtypes)
