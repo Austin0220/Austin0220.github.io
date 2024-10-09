@@ -112,6 +112,7 @@
             <li>Age</li>
             <li>Body fat percentage</li>
             <li>Weight</li>
+            <li>Height</li>
         </ul>
         <figcaption>*Most important</figcaption>
     </figure>
@@ -119,17 +120,20 @@
         <p>
             Ethically speaking, these models shouldn't be published without a very big disclaimer
             about the accuracy. Overall, the accuracy of these models was good enough to show a trend
-            but not good enough to evaluate an individual case with high certainty. These are still important
+            but not good enough to evaluate an individual case with high certainty. These models are still important however,
             because it shows that there are factors that could and have a very strong implication for
             overall fitness and health. This model also makes no distinction or weight for men vs women,
             which is an unfair comparison because fitness is a different standard between the two, which might
-            explain some of the inaccuracy.
+            explain some of the inaccuracy. <br><br>Overall, the question I had was answered.
+            The data is comprised of categories that are deterministic in nature, not randomly.
+            Additionally, the models would suggest that things such as sit up count and the distance leaned
+            forward by each person is a strong starting factor for determining fitness.
         </p>
         <h3>References</h3>
         <ul>
-            <li>Scikit exercise</li>
+            <li>Scikit Exercise</li>
             <li>Kaggle</li>
-            <li>In Class Discussion</li>
+            <li>In-Class Discussion</li>
             <li>Scikit Documentation</li>
         </ul>
         <h3>Code</h3>
@@ -142,7 +146,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 # NEEDS ABSOLUTE FILE PATH!!! #
-Raw= pd.read_csv("C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 2\\bodyPerformance.csv")
+Raw= pd.read_csv("*Filepath*")
 print(Raw.head())
 print(Raw.columns)
 print(Raw.dtypes)
@@ -171,25 +175,9 @@ fig=plt.figure(figsize=(60,80))
 _= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=4)
 #tree.plot_tree(clf, feature_names=X.columns, filled=True)
 #print(SortedRaw)
-#Questions
-#What correlation if any is there between body fat and strength?
-#how does body fat affect physical fitness?
-#What aspects of physical fitness are most impacted by high body fat%?
-#What correlation if any is there between age and fitness?
 
-#sns.set(rc={"figure.figsize":(20,12)})
-#plot= sns.scatterplot(data=Raw, x='weight_kg', y='gripForce')
-#plot= sns.scatterplot(data=Raw, x='weight_kg', y='body fat_%')
-#plotting both of these columns in relation to weight shows that there is at least some missing factor here that is making up for the clear discrepancy. 
-#two factors make up for dynamic weight (as opposed to static weight being from bones, organs, cartilage which varies marginally with height.) these being fat and muscle.
-#the figure shown illustrates that the relationship between body fat and weight does not map to the relationship between grip strength and weight.
-#plot2= sns.scatterplot(data=Raw, x='weight_kg', y='muscleMass%(Rough)')
-#The data itsef used a ranking system of four ratings, A through D.
-#plot3= sns.boxplot(data=SortedRaw, x='class', y='body fat_%')
-#figure shows a correlation between class and body fat
-#plot3= sns.barplot(data=SortedRaw, x='age', y='gripForce')
 plt.show()
-fig.savefig('C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 2\\figure5C.png')
+fig.savefig('*Filepath*')
             </pre>
             </figure>
             <figcaption>

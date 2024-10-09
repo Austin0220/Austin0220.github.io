@@ -18,8 +18,8 @@ RefRaw = pd.get_dummies(Raw , drop_first=False)
 print(RefRaw)
 X=RefRaw.drop(columns=['class_D', 'class_B', 'class_C', 'class_A'])
 #y=RefRaw['class_D']
-y=RefRaw['class_C']
-#y=RefRaw['class_B']
+#y=RefRaw['class_C']
+y=RefRaw['class_B']
 #y=RefRaw['class_A']
 print(X)
 print(y)
@@ -31,7 +31,7 @@ print(clf.predict(X_test))
 predicted=clf.predict(X_test)
 print(clf.score(X_test, y_test), predicted)
 fig=plt.figure(figsize=(60,80))
-_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=4)
+_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=3)
 #tree.plot_tree(clf, feature_names=X.columns, filled=True)
 #print(SortedRaw)
 #Questions
@@ -52,4 +52,4 @@ _= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=4)
 #figure shows a correlation between class and body fat
 #plot3= sns.barplot(data=SortedRaw, x='age', y='gripForce')
 plt.show()
-fig.savefig('C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 2\\figure5C.png')
+fig.savefig('C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 2\\figure4B.png')
