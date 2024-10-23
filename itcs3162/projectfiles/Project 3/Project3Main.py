@@ -19,15 +19,14 @@ SortedRaw=Raw.sort_values(by='class')
 #sns.countplot(data=Raw, x='class')
 RefRaw = pd.get_dummies(Raw , drop_first=False)
 print(RefRaw)
-RefRaw = RefRaw.drop(columns = )
-X=RefRaw.drop(columns=['class_D', 'class_B', 'class_C', 'class_A'])
-#y=RefRaw['class_D']
-#y=RefRaw['class_C']
-#y=RefRaw['class_B']
-Y=RefRaw['class_A']
+X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', 'diastolic', 'systolic']]
+#Y=RefRaw['class_D']
+#Y=RefRaw['class_C']
+#Y=RefRaw['sit and bend forward_cm']
+Y=RefRaw['body fat_%']
 print(X)
 print(Y)
-X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.2, random_state =0)
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.3, random_state =3)
 print(X_train.shape, X_test.shape, Y_train.shape, Y_test.shape)
 reg = LinearRegression()
 reg.fit(X_train, Y_train)
@@ -35,7 +34,7 @@ print(reg.score(X_test, Y_test))
 Y_pred1 = reg.predict(X_test)
 mae1 = mean_absolute_error(Y_test, Y_pred1).round(2)
 mse1 = mean_squared_error(Y_test, Y_pred1).round(2)
-mape1 = ((np.mean(np.abs(Y_test-Y_pred1)/Y_test) * 100)/((len(RefRaw))+1)).round(2)
+mape1 = ((np.mean(np.abs(Y_test-Y_pred1)/(Y_test)) * 100)/len(RefRaw)).round(2)
 
 print(f"MAE: {mae1}\n MSE:{mse1} \n MAPE:{mape1}%.")
 #print(clf.predict(X_test))
@@ -45,6 +44,7 @@ fig=plt.figure(figsize=(60,80))
 #_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=3)
 #tree.plot_tree(clf, feature_names=X.columns, filled=True)
 #print(SortedRaw)
+#sns.heatmap(RefRaw, )
 #plot= sns.scatterplot(data=Raw, x='weight_kg', y='gripForce')
 #plot= sns.scatterplot(data=Raw, x='weight_kg', y='body fat_%')
 #plot3= sns.boxplot(data=SortedRaw, x='class', y='body fat_%')
