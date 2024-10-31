@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Austin Sasso's Astute Sugar Glider ; Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/default.css">
+        <link rel="icon" type="image/x-icon" href="images/icon.png">
+    </head>
+    <header data-include="components/header.html"></header>
+        <main>
+        <h2>Project 3</h2>
+        <h3>Questions</h3>
+        <ul>
+            <li>predicting high systolic, diastolic blood pressure</li>
+            <li>Body Fat % based on most other physical factors like height, weight, sit ups, distance leaned forward, etc.</li>
+            <li></li>
+        </ul>
+        <h3>Dataset</h3>
+        <p>
+            Same dataset as projects 1 and 2, more of the same with analysis of general fitness stats and basic body measurements,
+            in addition to the classification and relevant attributes.
+        </p>
+        <h3>Preprocessing</h3>
+        <p>
+            In addition to what was done in projects 1 and 2, I had to filter the data to drop certain columns for specific
+            correlations and tests.
+        </p>
+        <h3>Visualization</h3>
+        <p>
+            //TODO
+        </p>
+        <h3>Experimentation</h3>
+        <h4>Experiment One</h4>
+        <p>
+            My first experiment was attempting to model the weight of each individual based on
+            several factors relating to it, such as body fat, height, factors to do with physical fitness, etc.
+            <br>
+            <br>
+            I used a linear regression model to analyze the trend of about 20% of the dataset, and then used that to
+            attempt to predict the weight of each individual based on their already mentioned attributes.
+            <br>
+            <br>
+            The results of the experimentation were interesting and illustrated why pure accuracy is a misleading metric when it comes to
+            trend prediction.
+            <br>
+            <br>
+            While the model itself was only around 68% accurate, the rough margin of error per individual was around 4% body fat.
+            Overall the model was very close to predicting the individual fat levels based on pattern recognition and correlations with 7 features to work off of.
+            <h3>Conclusion</h3>
+            From this it can be reasonably concluded that these features and the target values are related fairly closely, and analysis of one likely informs the other.
+        </p>
+        <figure>
+            <pre>
+
+            </pre>
+            </figure>
+            <figcaption>
+                Python code originally in .py file. included in the github link <a href="https://github.com/Austin0220/Austin0220.github.io/blob/main/itcs3162/projectfiles/Project%202/Project2Main.py"> here</a>.
+                Comments are for plot and model generation based on test value. Could be improved with an if statement
+                but decided to push it to next project.
+            </figcaption>
+        </main>
+        <footer data-include="components/footer.html"></footer>
+        <script src="scripts/headers-footers.js"></script>
+</html>

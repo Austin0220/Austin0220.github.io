@@ -7,25 +7,188 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/default.css">
         <link rel="icon" type="image/x-icon" href="images/icon.png">
-        
     </head>
     <header data-include="components/header.html"></header>
         <main>
         <h2>Project 2</h2>
-        <h3>Premise</h3>
+        <h3>Problem</h3>
         <p>
-            The Premise of training this data is twofold. The first component is testing a classification Criteria In the Data itself, being the "Class" parameter. The second is the actual testing and
-            Categorization of rows based on factors relating to physical fitness, i.e. % body fat, jump height, weight, etc.
+            I had two goals in mind with this dataset. The main point was to test if the classifications of people
+            were random or deterministic in nature. The secondary point was to treat this test as an
+            analysis of the data to see what factors were most polarizing in determining physical fitness
+            classes.
         </p>
-        <h2>Methodology</h2>
+        <h3>Dataset</h3>
         <p>
-            Overall method will be a decision tree, as the data lends itself well to categorization, in addition to being fantastic for testing the "Class" Field.
+            Same dataset as project 1, analysis differs. The dataset follows a general
+            trend of evaluating physical fitness of participants, then classifying them based on
+            these attributes.
         </p>
+        <h3>Preprocessing</h3>
+        <p>
+            Preprocessing was done beforehand in project 1, including making sure that inaccurate
+            or irrelevant factors are stripped from the dataset so as to not cloud data, such as non-body fat mass.
+        </p>
+        <h3>Visualization</h3>
+        <p>
+            Re-using a figure from project 1, being the box plot categorization of participants in
+            to four classes, A, B, C, and D. this figure suggests that the data is actually classified
+            deterministically and not necessarily randomly, as the comparison by body fat percentage
+            would suggest, shown below.
+        </p>
+        <figure>
+            <img src="projectfiles/Project 2/figure3.png">
+            <figcaption>
+                A boxplot representing general group body fat percentages.
+            </figcaption>
+        </figure>
+        <p>
+            This box plot serves as the basis for my model. While not all encompassing,
+            the suggestion that something is there was enough to explore further with an
+            actionable hypothesis to test, being as explained earlier.
+        </p>
+        <h3>Modeling</h3>
+        <p>
+            I used a basic decision tree utilizing all of the metrics outside of the "class" column.
+            As for testing criteria, I simply used the deterministic data to be weather the participant
+            fit into the class 'D' or not. This works extremely well for my dataset because the
+            participants are already classified technically. The determining factor though, was accuracy
+            (i.e., the ratio of correct predictions to total predictions).
+        </p>
+            <h3>Evaluation</h3>
+        <p>
+            The accuracy of this model tended to hover between 88% and 90%, which says that not only is
+            the classification of the data very accurate and deterministic, it's variance is extremely low, meaning that
+            the process is consistent, and therefore, not random. In this case, both the model and the data
+            were well tailored to each other.
+<br>
+            This can be seen in the decision tree below.
+        </p>
+        <figure>
+            <img src="projectfiles/Project 2/figure2D.png"
+            width="100%">
+            <figcaption>
+                A decision tree model classifying people into class D based on data.
+            </figcaption>
+        </figure>
+        <p>
+            The graphs for A, B, and C are below, with accuracies listed.
+        </p>
+        <figure>
+            <img src="projectfiles/Project 2/figure1A.png"
+            width="100%">
+            <figcaption>
+                A decision tree model classifying people into class A based on data, with an overall accuracy between 84% to 86%.
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="projectfiles/Project 2/figure4B.png"
+            width="100%">
+            <figcaption>
+                A decision tree model classifying people into class B based on data, with an overall accuracy between 74% to 76%.
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="projectfiles/Project 2/figure1A.png"
+            width="100%">
+            <figcaption>
+                A decision tree model classifying people into class C based on data, with an overall accuracy around 78%.
+            </figcaption>
+        </figure>
+        <p>
+            These figures are all depictions the same decision tree model, but with different
+            end criteria, being the four classes listed. The accuracy of the models varies, but
+            maintains a consistent accuracy of at least 74% (depth 4), which indicates that, while the
+            model or classifications may not be perfect indicators, they can be a good starting
+            point for physical fitness of an individual.
+        </p>
+        <h3>Important Features</h3>
+        <p>
+            The most important features across the four models were as follows:
+        </p>
+        <figure>
+        <ul>
+            <li>Distance an individual could sit forward in CM*</li>
+            <li>Sit up count</li>
+            <li>Age</li>
+            <li>Body fat percentage</li>
+            <li>Weight (Kg)</li>
+            <li>Height (Cm)</li>
+        </ul>
+        <figcaption>*Most important</figcaption>
+    </figure>
+        <h3>Conclusions and Impacts</h3>
+        <p>
+            Ethically speaking, these models shouldn't be published without a very big disclaimer
+            about the accuracy. Overall, the accuracy of these models was good enough to show a trend
+            but not good enough to evaluate an individual case with high certainty. These models are still important however,
+            because it shows that there are factors that could and have a very strong implication for
+            overall fitness and health. This model also makes no distinction or weight for men vs women,
+            which is an unfair comparison because fitness is a different standard between the two, which might
+            explain some of the inaccuracy.<br>
+            <br>
+            Overall, the question I had was answered.
+            The data is comprised of categories that are deterministic in nature, not randomly.
+            Additionally, the models would suggest that things such as sit up count and the distance leaned
+            forward by each person is a strong starting factor for determining fitness, but more analysis is needed.
+            I think I'll be using this dataset for project three as well to plot trends of my data to get a better
+            picture of the classifications.
+        </p>
+        <h3>References</h3>
+        <ul>
+            <li>Scikit Exercise</li>
+            <li>Kaggle</li>
+            <li>In-Class Discussion</li>
+            <li>Scikit Documentation</li>
+        </ul>
+        <h3>Code</h3>
+        <figure>
+            <pre>
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+# NEEDS ABSOLUTE FILE PATH!!! #
+Raw= pd.read_csv("*Filepath*")
+print(Raw.head())
+print(Raw.columns)
+print(Raw.dtypes)
+print(Raw.isna().sum())
+#Raw['muscleMass%(Rough)']= 100-Raw['body fat_%']
+#print(Raw['muscleMass%(Rough)'])
+SortedRaw=Raw.sort_values(by='class')
+#sns.countplot(data=Raw, x='class')
+RefRaw = pd.get_dummies(Raw , drop_first=False)
+print(RefRaw)
+X=RefRaw.drop(columns=['class_D', 'class_B', 'class_C', 'class_A'])
+#y=RefRaw['class_D']
+y=RefRaw['class_C']
+#y=RefRaw['class_B']
+#y=RefRaw['class_A']
+print(X)
+print(y)
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=.30)
+print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+clf= tree.DecisionTreeClassifier()
+clf=clf.fit(X_train, y_train)
+print(clf.predict(X_test))
+predicted=clf.predict(X_test)
+print(clf.score(X_test, y_test), predicted)
+fig=plt.figure(figsize=(60,80))
+_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=4)
+#tree.plot_tree(clf, feature_names=X.columns, filled=True)
+#print(SortedRaw)
 
+plt.show()
+fig.savefig('*Filepath*')
+            </pre>
             </figure>
             <figcaption>
                 Python code originally in .py file. included in the github link <a href="https://github.com/Austin0220/Austin0220.github.io/blob/main/itcs3162/projectfiles/Project%202/Project2Main.py"> here</a>.
-                Comments are purely for individual plot generation, and can be deleted selectively for individual plots.
+                Comments are for plot and model generation based on test value. Could be improved with an if statement
+                but decided to push it to next project.
             </figcaption>
         </main>
         <footer data-include="components/footer.html"></footer>
