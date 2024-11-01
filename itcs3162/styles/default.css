@@ -73,7 +73,12 @@ h3
 h4{
   font-family: Silk-Remington;
   text-align: center;
-  color:var(--platinum);
+  color:var(--beauty-bush);
+}
+h5{
+  font-family: Silk-Remington;
+  text-align: center;
+  color:var(--cocoa-bean);
 }
 figcaption
 {

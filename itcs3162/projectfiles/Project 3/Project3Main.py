@@ -19,11 +19,14 @@ SortedRaw=Raw.sort_values(by='class')
 #sns.countplot(data=Raw, x='class')
 RefRaw = pd.get_dummies(Raw , drop_first=False)
 print(RefRaw)
-X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', 'diastolic', 'systolic']]
+#X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', 'diastolic', 'systolic']] #Experiment 1
+X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', "body fat_%"]] #Experiment 2
 #Y=RefRaw['class_D']
 #Y=RefRaw['class_C']
 #Y=RefRaw['sit and bend forward_cm']
-Y=RefRaw['body fat_%']
+#Y=RefRaw['body fat_%'] #experiment 1
+#Y=RefRaw['systolic']
+Y=RefRaw['broad jump_cm']
 print(X)
 print(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.3, random_state =3)
@@ -37,10 +40,11 @@ mse1 = mean_squared_error(Y_test, Y_pred1).round(2)
 mape1 = ((np.mean(np.abs(Y_test-Y_pred1)/(Y_test)) * 100)/len(X)).round(2)
 
 print(f"MAE: {mae1}\n MSE:{mse1} \n MAPE:{mape1}%.")
+
 #print(clf.predict(X_test))
 #predicted=clf.predict(X_test)
 #print(clf.score(X_test, Y_test), predicted)
-fig=plt.figure(figsize=(60,80))
+#fig=plt.figure(figsize=(60,80))
 #_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=3)
 #tree.plot_tree(clf, feature_names=X.columns, filled=True)
 #print(SortedRaw)

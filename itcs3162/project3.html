@@ -46,10 +46,31 @@
             trend prediction.
             <br>
             <br>
-            While the model itself was only around 68% accurate, the rough margin of error per individual was around 4% body fat.
-            Overall the model was very close to predicting the individual fat levels based on pattern recognition and correlations with 7 features to work off of.
-            <h3>Conclusion</h3>
-            From this it can be reasonably concluded that these features and the target values are related fairly closely, and analysis of one likely informs the other.
+            While the model itself was only around 68% accurate, the rough margin of error per individual was around 4% body fat. 
+            This is the metric that truly matters most as it gives an Idea of the real accuracy of the model beyond predicting exact values.
+            <h5>Conclusion</h5>
+            From this it can be reasonably concluded that these features and the target value are related fairly closely, leading to a fairly accurate
+            basis for prediction.
+        </p>
+        <h4>Experiment Two</h4>
+        <p>
+            The next was a bit of a jumping off point from the first. Since the first one seemed to do pretty well, I decided to try it again with 
+            a few of the other features. The first of these was systolic blood pressure.
+            <br>
+            <br>
+            This model performed very poorly. I started by adding in the same parameters as last time, being grip force, weight, height, sit ups, distance
+            bent forward, and body fat, notably discarding diastolic blood pressure to make it more dependant on secondary factors, all other settings
+            remained consistent. This model had a mere 13% overall accuracy and had a huge margin of error of 13.6 mmHg. This is enough of a margin to 
+            classify someone who is comfortably healthy as in danger of heart disease, and vice versa.
+            <br>
+            <br>
+            <h5>Conclusion</h5>
+            This ultimately shows that these features are not good at predicting blood pressure inherently, and at best only hint at the truth, and can 
+            easily be misinterpreted.
+        </p>
+        <h4>Experiment 3</h4>
+        <p>
+            
         </p>
         <figure>
             <pre>
