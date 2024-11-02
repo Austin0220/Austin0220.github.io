@@ -11,11 +11,17 @@
     <header data-include="components/header.html"></header>
         <main>
         <h2>Project 3</h2>
+        <h3>What is Linear Regression?</h3>
+        <p>
+            Linear Regression is a statistical model that estimates a linear relationship based on dependant and independant
+            Variables. It uses the variables to predict a trend line, then gives an error rate based on how accuratly the trend
+            line fits the data points.
+        </p>
         <h3>Questions</h3>
         <ul>
-            <li>predicting high systolic, diastolic blood pressure</li>
-            <li>Body Fat % based on most other physical factors like height, weight, sit ups, distance leaned forward, etc.</li>
-            <li></li>
+            <li>can a model trained on these data be used to predict diastolic blood pressure?</li>
+            <li>can  body fat % be predicted based on most other physical factors like height, weight, sit ups, distance leaned forward, etc.?</li>
+            <li>can general fitness data be used to model overall broad jump distance?</li>
         </ul>
         <h3>Dataset</h3>
         <p>
@@ -29,7 +35,7 @@
         </p>
         <h3>Visualization</h3>
         <p>
-            //TODO
+            Viaualizations can be found in projects 1 and 2.
         </p>
         <h3>Experimentation</h3>
         <h4>Experiment One</h4>
@@ -62,23 +68,127 @@
             bent forward, and body fat, notably discarding diastolic blood pressure to make it more dependant on secondary factors, all other settings
             remained consistent. This model had a mere 13% overall accuracy and had a huge margin of error of 13.6 mmHg. This is enough of a margin to 
             classify someone who is comfortably healthy as in danger of heart disease, and vice versa.
-            <br>
-            <br>
-            <h5>Conclusion</h5>
-            This ultimately shows that these features are not good at predicting blood pressure inherently, and at best only hint at the truth, and can 
-            easily be misinterpreted.
         </p>
-        <h4>Experiment 3</h4>
+        <h5>Conclusion</h5>
+            <p>
+                This ultimately shows that these features are not good at predicting blood pressure inherently, and at best only hint at the truth, and can 
+                easily be misinterpreted.
+            </p>
+        <h4>Experiment Three</h4>
         <p>
-            
+            For the third experiment, I trained a model around predicting distance broad jumped. 
+            <br>
+            <br>
+            This model served as a very interesting example, as its accuracy was the highest of the three models, at 76%, yet it had one of the worst
+            margins of error for its category, which was about 19cm. While not completely terrible, this is almost two thirds of a foot off in one direction or
+            the other. While useful, This type of prediction is good for nothing but a very crude estimate for a general purpose.
+            <br>
+            <br>
+            The reason I say this is interesting is this: it proves that accuracy and error are not necessarily interrelated. This was suggested in experiment 2,
+            but confirmed in this one becuase the high level of accuracy still lead to a huge margin of error.
         </p>
+        <h5>Conclusion</h5>
+        <p>
+            Overall, while the model performed poorly in terms of error, the experience is invaluable because it illustrates a premise that accuracy can be
+            a misleading metric if you rely on it too heavily. In two of these experiments, accuracy was correlated with poor performance, but in the third it
+            showed a high accuracy with a poor margin of error. Lastly, it seems with this selection of features, broad jump distance can be predicted roughly
+            to give a general idea of expectation.
+        </p>
+        <h3>Impact</h3>
+        <p>
+            Overall impact is hard to say. I think that these experiments, while not perfect, tend toward the suggestion that fitness
+            is important for overall bodily health, and that, generally speaking, the more fit you are, the better your health metrics will be, 
+            and you'll be more athletic. While this may seem obvious, the data supporting this common notion is important, as it illustrates
+            to us that our conceptions are generally correct.
+        </p>
+        <h3>Conclusions</h3>
+        <p>
+            There were three individual conclusions on each of the experiments, so the broader conclusions will be a list of key points from each.
+        </p>
+        <ul>
+            <li>Experiment 1 proved that the table features could predict body fat with reasonable accuracy and error margins</li>
+            <li>Experiment 2 showed that a similar list of factors was poor at predicting systolic blood pressure</li>
+            <li>Experiment 3 illustrated that an analsys on overall fitness can give you an idea about broad jump distance, but had a huge margin of error</li>
+            <li>The biggest takeaway from all of the experiments outside of the data themselves, was the fact that accuracy wasn't the most important 
+                factor to consider, margin of error, or mean squared error does (margin of error is taken from MSE through square rooting it)
+            </li>
+        </ul>
+        <h3>References</h3>
+        <ul>
+            <li>Regression Exercise</li>
+            <li>Kaggle</li>
+            <li>In-Class Discussion</li>
+            <li>Scikit Documentation</li>
+            <li>Results from projects 1 and 2</li>
+        </ul>
+        <h3>Code</h3>
         <figure>
             <pre>
-
+                import pandas as pd
+                import numpy as np
+                import matplotlib.pyplot as plt
+                import seaborn as sns
+                from sklearn.model_selection import train_test_split
+                from sklearn.metrics import mean_absolute_error, mean_squared_error
+                from sklearn.linear_model import LinearRegression
+                from sklearn import tree
+                import statsmodels.api as sm
+                # NEEDS ABSOLUTE FILE PATH!!! #
+                Raw= pd.read_csv("FILEPATH")
+                print(Raw.head())
+                print(Raw.columns)
+                print(Raw.dtypes)
+                print(Raw.isna().sum())
+                #Raw['muscleMass%(Rough)']= 100-Raw['body fat_%']
+                #print(Raw['muscleMass%(Rough)'])
+                SortedRaw=Raw.sort_values(by='class')
+                #sns.countplot(data=Raw, x='class')
+                
+                RefRaw = pd.get_dummies(Raw , drop_first=False)
+                print(RefRaw)
+                RefRaw = RefRaw[['age','height_cm','weight_kg','body fat_%','diastolic','systolic','gripForce','sit and bend forward_cm','sit-ups counts','broad jump_cm']]
+                #X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', 'diastolic', 'systolic']] #Experiment 1
+                X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', "body fat_%"]] #Experiment 2 & 3
+                #Y=RefRaw['class_D']
+                #Y=RefRaw['class_C']
+                #Y=RefRaw['sit and bend forward_cm']
+                #Y=RefRaw['body fat_%'] #experiment 1
+                #Y=RefRaw['systolic'] #experiment 2
+                Y=RefRaw['broad jump_cm'] #experiment 3
+                print(X)
+                print(Y)
+                X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.3, random_state =3)
+                print(X_train.shape, X_test.shape, Y_train.shape, Y_test.shape)
+                reg = LinearRegression()
+                reg.fit(X_train, Y_train)
+                print(reg.score(X_test, Y_test))
+                Y_pred1 = reg.predict(X_test)
+                mae1 = mean_absolute_error(Y_test, Y_pred1).round(2)
+                mse1 = mean_squared_error(Y_test, Y_pred1).round(2)
+                mape1 = ((np.mean(np.abs(Y_test-Y_pred1)/(Y_test)) * 100)/len(X)).round(2)
+                
+                print(f"MAE: {mae1}\n MSE:{mse1} \n MAPE:{mape1}%.")
+                
+                #print(clf.predict(X_test))
+                #predicted=clf.predict(X_test)
+                #print(clf.score(X_test, Y_test), predicted)
+                #fig=plt.figure(figsize=(60,80))
+                #_= tree.plot_tree(clf, feature_names=X.columns, filled=True, max_depth=3)
+                #tree.plot_tree(clf, feature_names=X.columns, filled=True)
+                #print(SortedRaw)
+                #sns.heatmap(RefRaw, annot=True)
+                #plot= sns.scatterplot(data=Raw, x='weight_kg', y='gripForce')
+                #plot= sns.scatterplot(data=Raw, x='weight_kg', y='body fat_%')
+                #plot3= sns.boxplot(data=SortedRaw, x='class', y='body fat_%')
+                #figure shows a correlation between class and body fat
+                #plot3= sns.barplot(data=SortedRaw, x='age', y='gripForce')
+                #plt.show()
+                #fig.savefig('FILEPATH')
             </pre>
             </figure>
+            
             <figcaption>
-                Python code originally in .py file. included in the github link <a href="https://github.com/Austin0220/Austin0220.github.io/blob/main/itcs3162/projectfiles/Project%202/Project2Main.py"> here</a>.
+                Python code originally in .py file. included in the github link <a href="https://github.com/Austin0220/Austin0220.github.io/blob/main/itcs3162/projectfiles/Project%203/Project3Main.py"> here</a>.
                 Comments are for plot and model generation based on test value. Could be improved with an if statement
                 but decided to push it to next project.
             </figcaption>

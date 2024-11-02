@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn import tree
 import statsmodels.api as sm
 # NEEDS ABSOLUTE FILE PATH!!! #
-Raw= pd.read_csv("C:\\Users\\Cranell\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 3\\bodyPerformance.csv")
+Raw= pd.read_csv("E:\\Documents\\GitHub\\Austin0220.github.io\\itcs3162\\projectfiles\\Project 3\\bodyPerformance.csv")
 print(Raw.head())
 print(Raw.columns)
 print(Raw.dtypes)
@@ -17,16 +17,18 @@ print(Raw.isna().sum())
 #print(Raw['muscleMass%(Rough)'])
 SortedRaw=Raw.sort_values(by='class')
 #sns.countplot(data=Raw, x='class')
+
 RefRaw = pd.get_dummies(Raw , drop_first=False)
 print(RefRaw)
+RefRaw = RefRaw[['age','height_cm','weight_kg','body fat_%','diastolic','systolic','gripForce','sit and bend forward_cm','sit-ups counts','broad jump_cm']]
 #X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', 'diastolic', 'systolic']] #Experiment 1
-X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', "body fat_%"]] #Experiment 2
+X=RefRaw[['gripForce','weight_kg', 'height_cm', 'sit-ups counts', 'sit and bend forward_cm', "body fat_%"]] #Experiment 2 & 3
 #Y=RefRaw['class_D']
 #Y=RefRaw['class_C']
 #Y=RefRaw['sit and bend forward_cm']
 #Y=RefRaw['body fat_%'] #experiment 1
-#Y=RefRaw['systolic']
-Y=RefRaw['broad jump_cm']
+#Y=RefRaw['systolic'] #experiment 2
+Y=RefRaw['broad jump_cm'] #experiment 3
 print(X)
 print(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size = 0.3, random_state =3)
